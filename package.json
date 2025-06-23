@@ -1,0 +1,30 @@
+{
+  "name": "server-test-api-js",
+  "version": "1.0.0",
+  "description": "REST api for testing in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadogeri/Server-Test-Api-JS.git"
+  },
+  "keywords": [
+    "API",
+    "@jadogeri",
+    "jadogeri",
+    "Mongoose",
+    "MongoDB",
+    "Express",
+    "Node",
+    "NodeJS",
+    "ExpressJS"
+  ],
+  "author": "Joseph Adogeri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jadogeri/Server-Test-Api-JS/issues"
+  },
+  "homepage": "https://github.com/jadogeri/Server-Test-Api-JS#readme"
+}
