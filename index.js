@@ -15,6 +15,8 @@ app.use(cors(corsOptions));
 
 //routes
 app.use("/api/item", require("./src/routes/itemRoutes"));
+app.use("/api/object", require("./src/routes/objectRoutes"));
+
 
 
 // Start the server
