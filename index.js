@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require("cors");
 const { startConnection } = require("./src/configs/mongoDB");
 const { corsOptions } = require("./src/configs/cors");
-require('dotenv').config()
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5500;
@@ -16,8 +16,6 @@ app.use(cors(corsOptions));
 //routes
 app.use("/api/item", require("./src/routes/itemRoutes"));
 app.use("/api/object", require("./src/routes/objectRoutes"));
-
-
 
 // Start the server
 app.listen(port, () => {
