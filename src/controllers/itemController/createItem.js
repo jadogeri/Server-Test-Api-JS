@@ -1,4 +1,5 @@
 const asyncHandler = require('express-async-handler');
+const Item = require("../../models/itemModel")
 
 /**
  * @description creates an Item
@@ -6,10 +7,14 @@ const asyncHandler = require('express-async-handler');
  * @access public
  */
 
-const createItem = asyncHandler(async (req, res) => {
-   
-    res.status(200).json({message : `created Item`});
-
+const createItem = asyncHandler(async (req, res) => {   
+    try {
+        const newItem = new Item(req.body);
+        await newItem.save();
+        res.status(201).json(newItem);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
 });
 
 module.exports = {createItem}

@@ -6,4 +6,4 @@ const itemSchema = new mongoose.Schema({
     quantity: Number,
 });
 
-module.exports = { itemSchema }
+module.exports =  itemSchema 

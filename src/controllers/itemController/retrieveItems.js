@@ -1,4 +1,6 @@
 const asyncHandler = require('express-async-handler');
+const Item = require("../../models/itemModel")
+
 
 /**
  * @description Retrieve all Items
@@ -7,8 +9,12 @@ const asyncHandler = require('express-async-handler');
  */
 
 const retrieveItems = asyncHandler(async (req, res) => {   
-
-     res.status(200).json({message : `Retrieved all items`});
+   try {
+        const items = await Item.find();
+        res.json(items);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
       
 });
 
