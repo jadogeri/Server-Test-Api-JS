@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require("cors");
 const { startConnection } = require("./src/configs/mongoDB");
-const { corsOptions } = require("./src/configs/cors");
+const corsOptions = require("./src/configs/cors");
 require('dotenv').config();
 
 const app = express();

@@ -10,4 +10,6 @@ const corsOptions = {
     credentials: true, // Allow cookies to be sent
 }
 
-module.exports = {corsOptions};
+module.exports = corsOptions;
+
+

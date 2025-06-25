@@ -10,7 +10,6 @@ const {
     retrieveItem,
     retrieveItems,
     updateItem,
-    describeItem
 }
 
 = require("../controllers/itemController");
@@ -28,8 +27,5 @@ router.get("/:id",retrieveItem);
 router.get("/",retrieveItems);
 
 router.patch("/:id",updateItem);
-
-router.head("/",describeItem);
-
 
 module.exports = router;

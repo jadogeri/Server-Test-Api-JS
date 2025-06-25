@@ -1,4 +1,5 @@
 const asyncHandler = require('express-async-handler');
+const Item = require("../../models/itemModel")
 
 /**
  * @description Retrieve a single Item
@@ -8,7 +9,13 @@ const asyncHandler = require('express-async-handler');
 
 const retrieveItem = asyncHandler(async (req, res) => {   
 
-     res.status(200).json({message : `Retrieved a single item`});
+   try {
+        const id = req.params.id;
+        const item = await Item.findById({_id : id})
+        res.json(item);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
       
 });
 
